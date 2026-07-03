@@ -1,0 +1,50 @@
+<style>
+    *{
+        margin: 0;
+    }
+    .container{
+        height: 100vh;
+        display: grid;
+        grid-template-columns: 3fr 1fr 1fr;
+        grid-template-rows: 1fr 3fr 1fr;
+        grid-template-areas: "head head head"
+                             "art aside nav"
+                             "foot foot foot";
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    }
+    .head{
+        grid-area: head;
+        background-color: rgb(78, 237, 78);
+        padding: 20px;
+    }
+    .art{
+        grid-area: art;
+        background-color: rgb(241, 217, 217);
+        padding: 20px;
+    }
+    .aside{
+        grid-area: aside;
+        background-color: rgb(249, 240, 171);
+        padding: 20px;
+    }
+    .nav{
+        grid-area: nav;
+        background-color: aqua;
+        padding: 20px;
+    }
+    .foot{
+        grid-area: foot;
+        background-color: rgb(78, 237, 78);
+        padding: 20px;
+    }
+</style>
+
+
+
+<div class="container">
+    <div class="head">Header</div>
+    <div class="art">Article</div>
+    <div class="aside">Aside</div>
+    <div class="nav">Nav</div>
+    <Div class="foot">Footer</Div>
+</div>
