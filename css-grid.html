@@ -1,0 +1,469 @@
+
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    .bg{
+        background-color: black;
+    }
+    .container{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        height: 100vh;
+        gap: 20px;
+        padding: 30px;
+    }
+    .des{
+        background-color: white;
+        border-radius: 8px;
+        overflow: hidden;
+    }
+
+  .o1{
+    background-color: #f25459;
+  }
+  .o2{
+    background-color: #f08a30;
+  }
+  .o3{
+    background-color:rgb(249, 199, 108);
+  }
+  .g1{
+    background-color: #049045;
+  }
+  .g2{
+    background-color: #19e9a4;
+  }
+  .g3{
+    background-color: #90ecd8;
+  }
+    .sep{
+        display: grid;
+        grid-template-rows:1fr 9fr;
+    }
+    .head{
+        display: grid;
+        grid-template-columns: 1fr 1fr 7fr;
+        background-color: lightgray;
+        grid-template-columns: 20px 20px 1fr;
+        gap: 10px;
+        align-items: center;
+        padding: 10px;
+    }
+    .dot1{
+        background: red;
+        height: 20px;
+        width: 20px;
+        border-radius: 50%;
+    }
+    .dot2{
+        background: rgb(73, 245, 54);
+        height: 20px;
+        width: 20px;
+        border-radius: 50%;
+    }
+
+    .A,
+    .B,
+    .C,
+    .D,
+    .E,
+    .F,
+    .G,
+    .H,
+    .I{
+        padding: 10px;
+}
+    .A{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 10px;
+    }
+
+    .B{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 10px;
+        grid-template-areas:
+            "bb1 bb1 bb2"
+            "bb3 bb4 bb2";
+    }
+    .bb1{
+        grid-area: bb1;
+    }
+    .bb2{
+        grid-area: bb2;
+    }
+    .bb3{
+        grid-area: bb3;
+    }
+    .bb4{
+        grid-area: bb4;
+    }
+
+    .C{
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+        grid-template-rows: 1fr 2fr 1fr;
+        gap: 10px;
+        grid-template-areas:
+            "cc1 cc1"
+            "cc2 cc3"
+            "cc4 cc4";
+    }
+    .cc1{
+        grid-area: cc1;
+    }
+    .cc2{
+        grid-area: cc2;
+    }
+    .cc3{
+        grid-area: cc3;
+    }
+    .cc4{
+        grid-area: cc4;
+    }
+
+    .D{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 2fr 2fr 0.7fr;
+        gap: 10px;    
+    }
+    .dd1{
+      grid-column: span 2;
+    }
+    .dd2{
+      grid-column: span 2;
+    }
+    .dd4{
+      grid-column: span 3;
+    }
+    .dd5{
+      grid-column: span 4;
+    }
+    .E{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        gap: 5px;
+    }
+
+    .F{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr ;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr ;
+        gap: 10px;
+        grid-template-areas:
+            "ff1 ff1 ff2 ff3"
+            "ff4 ff5 ff6 ff7"
+            "ff8 ff8 ff9 ff10"
+            "ff8 ff8 ff11 ff12"
+            "ff13 ff13 ff13 ff14";
+    }
+    .ff1{
+        grid-area: ff1;
+    }
+    .ff2{
+        grid-area: ff2;
+    }
+    .ff3{
+        grid-area: ff3;
+    }
+    .ff4{
+        grid-area: ff4;
+    }
+    .ff5{
+        grid-area: ff5;
+    }
+    .ff6{
+        grid-area: ff6;
+    }
+    .ff7{
+        grid-area: ff7;
+    }
+    .ff8{
+        grid-area: ff8;
+    }
+    .ff9{
+        grid-area: ff9;
+    }
+    .ff10{
+        grid-area: ff10;
+    }
+    .ff11{
+        grid-area: ff11;
+    }
+    .ff12{
+        grid-area: ff12;
+    }
+    .ff13{
+        grid-area: ff13;
+    }
+    .ff14{
+        grid-area: ff14;
+    }
+    
+
+    .G{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 0.6fr 1fr 0.6fr;
+        gap: 10px;
+        grid-template-areas:
+            "gg1 gg2"
+            "gg3 gg4"
+            "gg3 gg4";
+    }
+    .gg1{
+        grid-area: gg1;
+    }
+    .gg2{
+        grid-area: gg2;
+    }
+    .gg3{
+        grid-area: gg3;
+    }
+    .gg4{
+        grid-area: gg4;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+    .gg5{
+        grid-column: span 2;
+        margin: 5px;
+    }
+
+    .H{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: 0.6fr 0.6fr 0.5fr;
+        gap: 8px;
+        grid-template-areas:
+            "hh1 hh2 hh3 hh4 hh5"
+            "hh6 hh7 hh8 hh8 hh8"
+            "hh9 hh9 hh9 hh9 hh9";
+    }
+    .hh1{
+        grid-area: hh1;
+    }
+    .hh2{
+        grid-area: hh2;
+    }
+    .hh3{
+        grid-area: hh3;
+    }
+    .hh4{
+        grid-area: hh4;
+    }
+    .hh5{
+        grid-area: hh5;
+    }
+    .hh6{
+        grid-area: hh6;
+    }
+    .hh7{
+        grid-area: hh7;
+    }
+    .hh8{
+        grid-area: hh8;
+    }
+    .hh9{
+        grid-area: hh9;
+    }
+
+    .I{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 0.5fr 1fr 0.5fr;
+        gap: 10px;
+        grid-template-areas:
+            "ii1 ii1 ii1"
+            "ii2 ii3 ii3"
+            "ii2 ii4 ii5";
+    }
+    .ii1{
+        grid-area: ii1;
+    }
+    .ii2{
+        grid-area: ii2;
+    }
+    .ii3{
+        grid-area: ii3;
+    }
+    .ii4{
+        grid-area: ii4;
+    }
+    .ii5{
+        grid-area: ii5;
+    }
+
+</style>
+</head>
+<body class="bg">
+
+    <div class="container">
+
+        <div class="des sep">
+            <div class="head">
+                <div class="dot1"></div>
+                <div class="dot2"></div>
+            </div>
+            <div class="A">
+                <div class="o1"></div>
+                <div class="o2"></div>
+                <div class="o3"></div>
+                <div class="g1"></div>
+                <div class="g2"></div>
+                <div class="g3"></div>
+            </div>
+        </div>
+
+        <div class="des sep">
+            <div class="head">
+                <div class="dot1"></div>
+                <div class="dot2"></div>
+            </div>
+            <div class="B">
+                <div class="o1 bb1"></div>
+                <div class="o2 bb2"></div>
+                <div class="g1 bb3"></div>
+                <div class="g2 bb4"></div>
+            </div>
+        </div>
+
+        <div class="des sep">
+            <div class="head">
+                <div class="dot1"></div>
+                <div class="dot2"></div>
+            </div>
+            <div class="C">
+                <div class="o2 cc1"></div>
+                <div class="g1 cc2"></div>
+                <div class="o1 cc3"></div>
+                <div class="g2 cc4"></div>
+            </div>
+        </div>
+
+        <div class="des sep">
+            <div class="head">
+                <div class="dot1"></div>
+                <div class="dot2"></div>
+            </div>
+            <div class="D">
+                <div class="o2 dd1"></div>
+                <div class="o1 dd2"></div>
+                <div class="g1 dd3"></div>
+                <div class="g2 dd4"></div>
+                <div class="o2 dd5"></div>
+            </div>
+        </div>
+
+        <div class="des sep">
+            <div class="head">
+                <div class="dot1"></div>
+                <div class="dot2"></div>
+            </div>
+            <div class="E">
+                <div class="g1"></div>
+                <div class="o2"></div>
+                <div class="g2"></div>
+                <div class="o1"></div>
+                <div class="g3"></div>
+                <div class="o3"></div>
+                <div class="o3"></div>
+                <div class="g1"></div>
+                <div class="o2"></div>
+                <div class="g3"></div>
+                <div class="o3"></div>
+                <div class="o1"></div>
+                <div class="g1"></div>
+                <div class="o1"></div>
+                <div class="g3"></div>
+                <div class="o1"></div>
+                <div class="g1"></div>
+                <div class="g3"></div>
+            </div>
+        </div>
+
+        <div class="des sep">
+            <div class="head">
+                <div class="dot1"></div>
+                <div class="dot2"></div>
+            </div>
+            <div class="F">
+                <div class="o1 ff1"></div>
+                <div class="g1 ff2"></div>
+                <div class="o3 ff3"></div>
+                <div class="o2 ff4"></div>
+                <div class="g1 ff5"></div>
+                <div class="g2 ff6"></div>
+                <div class="ff7"></div>
+                <div class="o3 ff8"></div>
+                <div class="g3 ff9"></div>
+                <div class="o1 ff10"></div>
+                <div class="g1 ff11"></div>
+                <div class=" ff12"></div>
+                <div class="g3 ff13"></div>
+                <div class="o3 ff14"></div>
+            </div>
+        </div>
+
+        <div class="des sep">
+            <div class="head">
+                <div class="dot1"></div>
+                <div class="dot2"></div>
+            </div>
+            <div class="G">
+                <div class="o2 gg1"></div>
+                <div class="g3 gg2"></div>
+                <div class="o1 gg3"></div>
+                <div class="gg4" style="background-color: #049045;">
+                  <div class="g3 gg5"></div>
+                  <div class="g2" style="margin: 5px;"></div>
+                  <div class="o2" style="margin: 5px;"></div>
+                </div>
+                
+            </div>
+        </div>
+
+        <div class="des sep">
+            <div class="head">
+                <div class="dot1"></div>
+                <div class="dot2"></div>
+            </div>
+            <div class="H">
+                <div class="o1 hh1"></div>
+                <div class="o2 hh2"></div>
+                <div class="g3 hh3"></div>
+                <div class="g2 hh4"></div>
+                <div class="g1 hh5"></div>
+                <div class="o2 hh6"></div>
+                <div class="o1 hh7"></div>
+                <div class="o2 hh8"></div>
+                <div class="g3 hh9"></div>
+            </div>
+        </div>
+
+        <div class="des sep">
+            <div class="head">
+                <div class="dot1"></div>
+                <div class="dot2"></div>
+            </div>
+            <div class="I">
+                <div class="o2 ii1"></div>
+                <div class="g1 ii2"></div>
+                <div class="g3 ii3"></div>
+                <div class="o1 ii4"></div>
+                <div class="o2 ii5"></div>
+            </div>
+        </div>
+
+    </div>
+</body>
